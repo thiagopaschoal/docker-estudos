@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  api:
+    image: node:15.3.0-alpine3.10
+    restart: always
+    environment:
+      API_MSG: "Hello!!! I'm an API building in NodeJS"
+    build:
+      context: .
+    ports:
+      - "3002:3000"
